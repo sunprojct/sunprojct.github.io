@@ -17,7 +17,23 @@ body {
 }
 
 .image-container {
-    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0; /* отступ сверху и снизу */
+}
+
+.image-container img {
+    max-width: 100%; /* Занимает максимум ширины контейнера */
+    height: auto; /* Высота будет пропорциональной */
+    transition: transform 0.5s ease; /* Плавный переход при изменении размера */
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 600px) {
+    .image-container img {
+        max-width: 80%; /* Увеличиваем до 80% ширины экрана */
+    }
 }
 
 /* Плавное появление для главного изображения */
