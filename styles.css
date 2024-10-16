@@ -1,68 +1,70 @@
 body {
-    font-family: 'Arial', sans-serif; /* Простой шрифт */
     margin: 0;
     padding: 0;
-    background-color: #1c1c1c; /* Темный фон */
+    font-family: 'Roboto', sans-serif;
+    background-color: #121212; /* Тёмный фон */
     color: white; /* Цвет текста */
-    display: flex; /* Используем flexbox для центрирования */
-    justify-content: center; /* Центрируем по горизонтали */
-    align-items: center; /* Центрируем по вертикали */
-    height: 100vh; /* Высота на всю страницу */
+    overflow: hidden; /* Скрываем прокрутку */
 }
 
 .container {
-    text-align: center; /* Центрируем текст */
-}
-
-h1 {
-    margin-bottom: 20px; /* Отступ снизу для заголовка */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Занимаем всю высоту экрана */
+    text-align: center;
 }
 
 .image-container {
-    display: inline-block;
-    position: relative; /* Для абсолютного позиционирования описания */
-    border: 5px solid transparent; /* Прозрачная рамка для контейнера */
-    border-image: linear-gradient(to right, darkorange, orange) 1; /* Градиентная рамка */
-    border-radius: 15px; /* Закругленные углы рамки */
-    overflow: hidden; /* Скрываем часть изображения, выходящую за рамку */
+    margin-bottom: 20px;
 }
 
-.image-container img {
-    width: 300px; /* Ширина изображения */
-    height: auto; /* Высота будет пропорциональной */
-    display: block; /* Убираем пробел под изображением */
-    border-radius: 15px; /* Закругленные углы изображения */
+/* Плавное появление для главного изображения */
+.fade-up {
+    opacity: 0;
+    transform: translateY(-20px); /* Поднимаем изображение на 20px */
+    animation: fadeUp 0.5s forwards; /* Длительность анимации 0.5 секунды */
 }
 
-.description {
-    position: absolute; /* Абсолютное позиционирование */
-    top: 50%; /* Центрируем по вертикали */
-    left: 50%; /* Центрируем по горизонтали */
-    transform: translate(-50%, -50%); /* Центрируем текст */
-    background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный фон для текста */
-    color: white; /* Цвет текста */
-    padding: 10px 20px; /* Отступы */
-    border-radius: 10px; /* Закругленные углы текста */
+.main-image {
+    width: 50%; /* Изображение занимает 50% ширины */
+    border-radius: 15px; /* Закруглённые углы */
+    border: 5px solid transparent; /* Поле для рамки */
+    background: linear-gradient(to right, darkorange, orange); /* Градиентная рамка */
+    padding: 5px; /* Отступы */
 }
 
-.button-container {
-    margin-top: 20px; /* Отступ сверху для кнопок */
-    display: flex; /* Используем flexbox для кнопок */
-    justify-content: center; /* Центрируем кнопки по горизонтали */
+/* Плавное появление для кнопок */
+.buttons {
+    display: flex;
+    flex-direction: column; /* Кнопки располагаем вертикально */
+    align-items: center; /* Центрируем кнопки */
+    gap: 20px; /* Промежуток между кнопками */
+    opacity: 0;
+    transform: translateY(20px); /* Поднимаем кнопки на 20px */
+    animation: fadeUp 0.5s forwards; /* Длительность анимации 0.5 секунды */
+    animation-delay: 0.5s; /* Задержка анимации для кнопок */
 }
 
-.button {
-    padding: 10px 30px; /* Отступы внутри кнопки */
-    background-color: darkorange; /* Цвет кнопки */
-    border: none; /* Убираем границы */
-    border-radius: 20px; /* Закругленные углы кнопки */
-    color: white; /* Цвет текста на кнопке */
-    font-size: 16px; /* Размер текста */
-    cursor: pointer; /* Курсор в виде руки */
-    margin: 0 10px; /* Отступы между кнопками */
-    transition: background-color 0.3s; /* Плавный переход цвета */
+.cta-button {
+    background-color: #FF5722; /* Тёмно-оранжевый цвет кнопок */
+    color: white; /* Белый текст */
+    padding: 10px 20px; /* Отступы кнопок */
+    border: none; /* Убираем рамку */
+    border-radius: 25px; /* Закруглённые углы */
+    cursor: pointer; /* Курсор указателя */
+    text-decoration: none; /* Убираем подчеркивание */
+    transition: background-color 0.3s; /* Плавный переход цвета фона */
 }
 
-.button:hover {
-    background-color: orange; /* Цвет при наведении */
+.cta-button:hover {
+    background-color: #E64A19; /* Цвет при наведении */
+}
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0); /* Возвращаем элементы в исходное положение */
+    }
 }
