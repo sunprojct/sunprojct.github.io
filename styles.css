@@ -21,10 +21,10 @@ body {
     justify-content: center;
     align-items: center;
     margin: 20px 0; /* Отступ сверху и снизу */
-    border-radius: 15px; /* Закругленные углы контейнера */
     border: 5px solid transparent; /* Прозрачная рамка для контейнера */
     border-image: linear-gradient(to right, darkorange, orange) 1; /* Градиентная рамка */
     padding: 0; /* Убираем отступ между рамкой и изображением */
+    border-radius: 15px; /* Закругленные углы рамки */
 }
 
 .image-container img {
