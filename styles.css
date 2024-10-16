@@ -1,68 +1,68 @@
 body {
-    font-family: 'Roboto', sans-serif; /* Используем хороший шрифт */
+    font-family: 'Arial', sans-serif; /* Простой шрифт */
     margin: 0;
     padding: 0;
     background-color: #1c1c1c; /* Темный фон */
     color: white; /* Цвет текста */
     display: flex; /* Используем flexbox для центрирования */
-    flex-direction: column; /* Вертикальная ориентация */
-    align-items: center; /* Центрирование по горизонтали */
+    justify-content: center; /* Центрируем по горизонтали */
+    align-items: center; /* Центрируем по вертикали */
+    height: 100vh; /* Высота на всю страницу */
+}
+
+.container {
+    text-align: center; /* Центрируем текст */
+}
+
+h1 {
+    margin-bottom: 20px; /* Отступ снизу для заголовка */
 }
 
 .image-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 20px auto; /* Центрирование контейнера */
+    display: inline-block;
+    position: relative; /* Для абсолютного позиционирования описания */
     border: 5px solid transparent; /* Прозрачная рамка для контейнера */
     border-image: linear-gradient(to right, darkorange, orange) 1; /* Градиентная рамка */
     border-radius: 15px; /* Закругленные углы рамки */
     overflow: hidden; /* Скрываем часть изображения, выходящую за рамку */
-    width: 50%; /* Ширина для ПК */
 }
 
 .image-container img {
-    max-width: 100%; /* Занимает максимум ширины контейнера */
+    width: 300px; /* Ширина изображения */
     height: auto; /* Высота будет пропорциональной */
     display: block; /* Убираем пробел под изображением */
     border-radius: 15px; /* Закругленные углы изображения */
 }
 
+.description {
+    position: absolute; /* Абсолютное позиционирование */
+    top: 50%; /* Центрируем по вертикали */
+    left: 50%; /* Центрируем по горизонтали */
+    transform: translate(-50%, -50%); /* Центрируем текст */
+    background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный фон для текста */
+    color: white; /* Цвет текста */
+    padding: 10px 20px; /* Отступы */
+    border-radius: 10px; /* Закругленные углы текста */
+}
+
 .button-container {
-    display: flex;
-    flex-direction: column; /* Вертикальная ориентация кнопок */
-    align-items: center; /* Центрирование кнопок */
+    margin-top: 20px; /* Отступ сверху для кнопок */
+    display: flex; /* Используем flexbox для кнопок */
+    justify-content: center; /* Центрируем кнопки по горизонтали */
 }
 
 .button {
-    margin: 10px auto; /* Центрирование кнопок */
-    padding: 10px 20px; /* Отступы внутри кнопки */
+    padding: 10px 30px; /* Отступы внутри кнопки */
     background-color: darkorange; /* Цвет кнопки */
     border: none; /* Убираем границы */
     border-radius: 20px; /* Закругленные углы кнопки */
     color: white; /* Цвет текста на кнопке */
     font-size: 16px; /* Размер текста */
     cursor: pointer; /* Курсор в виде руки */
+    margin: 0 10px; /* Отступы между кнопками */
     transition: background-color 0.3s; /* Плавный переход цвета */
 }
 
 .button:hover {
     background-color: orange; /* Цвет при наведении */
-}
-
-/* Адаптивность для мобильных устройств */
-@media (max-width: 600px) {
-    .image-container {
-        width: 80%; /* Увеличиваем ширину контейнера для мобильных */
-    }
-}
-
-/* Плавная анимация появления */
-body {
-    opacity: 0; /* Скрываем тело изначально */
-    transition: opacity 1s; /* Плавный переход */
-}
-
-body.loaded {
-    opacity: 1; /* Показать тело */
 }
