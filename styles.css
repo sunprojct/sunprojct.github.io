@@ -1,0 +1,70 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #121212; /* Тёмный фон */
+    color: white; /* Цвет текста */
+    overflow: hidden; /* Скрываем прокрутку */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Занимаем всю высоту экрана */
+    text-align: center;
+}
+
+.image-container {
+    margin-bottom: 20px;
+}
+
+/* Плавное появление для главного изображения */
+.fade-up {
+    opacity: 0;
+    transform: translateY(-20px); /* Поднимаем изображение на 20px */
+    animation: fadeUp 0.5s forwards; /* Длительность анимации 0.5 секунды */
+}
+
+.main-image {
+    width: 50%; /* Изображение занимает 50% ширины */
+    border-radius: 15px; /* Закруглённые углы */
+    border: 5px solid transparent; /* Поле для рамки */
+    background: linear-gradient(to right, darkorange, orange); /* Градиентная рамка */
+    padding: 5px; /* Отступы */
+}
+
+/* Плавное появление для кнопок */
+.buttons {
+    display: flex;
+    flex-direction: column; /* Кнопки располагаем вертикально */
+    align-items: center; /* Центрируем кнопки */
+    gap: 20px; /* Промежуток между кнопками */
+    opacity: 0;
+    transform: translateY(20px); /* Поднимаем кнопки на 20px */
+    animation: fadeUp 0.5s forwards; /* Длительность анимации 0.5 секунды */
+    animation-delay: 0.5s; /* Задержка анимации для кнопок */
+}
+
+.cta-button {
+    background-color: #FF5722; /* Тёмно-оранжевый цвет кнопок */
+    color: white; /* Белый текст */
+    padding: 10px 20px; /* Отступы кнопок */
+    border: none; /* Убираем рамку */
+    border-radius: 25px; /* Закруглённые углы */
+    cursor: pointer; /* Курсор указателя */
+    text-decoration: none; /* Убираем подчеркивание */
+    transition: background-color 0.3s; /* Плавный переход цвета фона */
+}
+
+.cta-button:hover {
+    background-color: #E64A19; /* Цвет при наведении */
+}
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0); /* Возвращаем элементы в исходное положение */
+    }
+}
