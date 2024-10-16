@@ -5,66 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Мой сайт</title>
     <link rel="icon" href="favicon.ico" type="image/x-icon"> <!-- Убедись, что иконка добавлена -->
-    <style>
-        body {
-            font-family: 'Roboto', sans-serif; /* Используем хороший шрифт */
-            margin: 0;
-            padding: 0;
-            background-color: #1c1c1c; /* Темный фон */
-            color: white; /* Цвет текста */
-        }
-
-        .image-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: 20px auto; /* Центрирование контейнера */
-            border: 5px solid transparent; /* Прозрачная рамка для контейнера */
-            border-image: linear-gradient(to right, darkorange, orange) 1; /* Градиентная рамка */
-            padding: 0; /* Убираем отступ между рамкой и изображением */
-            border-radius: 15px !important; /* Закругленные углы рамки */
-            overflow: hidden; /* Скрываем часть изображения, выходящую за рамку */
-            width: 50%; /* Ширина для ПК */
-        }
-
-        .image-container img {
-            max-width: 100%; /* Занимает максимум ширины контейнера */
-            height: auto; /* Высота будет пропорциональной */
-            display: block; /* Убираем пробел под изображением */
-            border-radius: 15px; /* Закругленные углы изображения */
-        }
-
-        .button {
-            display: block; /* Каждый элемент на новой строке */
-            margin: 10px auto; /* Центрирование кнопок */
-            padding: 10px 20px; /* Отступы внутри кнопки */
-            background-color: darkorange; /* Цвет кнопки */
-            border: none; /* Убираем границы */
-            border-radius: 20px; /* Закругленные углы кнопки */
-            color: white; /* Цвет текста на кнопке */
-            font-size: 16px; /* Размер текста */
-            cursor: pointer; /* Курсор в виде руки */
-            transition: background-color 0.3s; /* Плавный переход цвета */
-        }
-
-        .button:hover {
-            background-color: orange; /* Цвет при наведении */
-        }
-
-        /* Адаптивность для мобильных устройств */
-        @media (max-width: 600px) {
-            .image-container {
-                width: 80%; /* Увеличиваем ширину контейнера для мобильных */
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css"> <!-- Подключаем CSS -->
 </head>
 <body>
     <div class="image-container">
-        <img src="main-photo.jpg" alt="Описание изображения">
+        <img src="your-image.webp" alt="Описание изображения">
     </div>
     <button class="button">Кнопка 1</button>
     <button class="button">Кнопка 2</button>
     <button class="button">Кнопка 3</button>
+    <script src="script.js"></script> <!-- Подключаем JS -->
 </body>
 </html>
