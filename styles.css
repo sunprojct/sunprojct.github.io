@@ -20,19 +20,34 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 20px 0; /* отступ сверху и снизу */
+    margin: 20px 0; /* Отступ сверху и снизу */
+    border-radius: 15px; /* Закругленные углы */
+    border: 5px solid; /* Толщина рамки */
+    border-image: linear-gradient(to right, darkorange, orange) 1; /* Градиентная рамка */
+    padding: 5px; /* Отступ между рамкой и изображением */
 }
 
 .image-container img {
     max-width: 100%; /* Занимает максимум ширины контейнера */
     height: auto; /* Высота будет пропорциональной */
-    transition: transform 0.5s ease; /* Плавный переход при изменении размера */
+    border-radius: 10px; /* Закругленные углы изображения */
 }
 
 /* Адаптивность для мобильных устройств */
 @media (max-width: 600px) {
+    .image-container {
+        width: 80%; /* Увеличиваем ширину контейнера для мобильных */
+    }
+
     .image-container img {
-        max-width: 80%; /* Увеличиваем до 80% ширины экрана */
+        max-width: 100%; /* Изображение занимает 100% ширины контейнера */
+    }
+}
+
+/* Адаптивность для ПК */
+@media (min-width: 601px) {
+    .image-container {
+        width: 50%; /* Ширина для ПК */
     }
 }
 
