@@ -25,12 +25,12 @@ body {
     border-image: linear-gradient(to right, darkorange, orange) 1; /* Градиентная рамка */
     padding: 0; /* Убираем отступ между рамкой и изображением */
     border-radius: 15px; /* Закругленные углы рамки */
+    overflow: hidden; /* Скрываем часть изображения, выходящую за рамку */
 }
 
 .image-container img {
     max-width: 100%; /* Занимает максимум ширины контейнера */
     height: auto; /* Высота будет пропорциональной */
-    border-radius: 15px; /* Закругленные углы изображения */
     display: block; /* Убираем пробел под изображением */
 }
 
