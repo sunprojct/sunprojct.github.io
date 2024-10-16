@@ -4,6 +4,9 @@ body {
     padding: 0;
     background-color: #1c1c1c; /* Темный фон */
     color: white; /* Цвет текста */
+    display: flex; /* Используем flexbox для центрирования */
+    flex-direction: column; /* Вертикальная ориентация */
+    align-items: center; /* Центрирование по горизонтали */
 }
 
 .image-container {
@@ -13,7 +16,6 @@ body {
     margin: 20px auto; /* Центрирование контейнера */
     border: 5px solid transparent; /* Прозрачная рамка для контейнера */
     border-image: linear-gradient(to right, darkorange, orange) 1; /* Градиентная рамка */
-    padding: 0; /* Убираем отступ между рамкой и изображением */
     border-radius: 15px; /* Закругленные углы рамки */
     overflow: hidden; /* Скрываем часть изображения, выходящую за рамку */
     width: 50%; /* Ширина для ПК */
@@ -26,8 +28,13 @@ body {
     border-radius: 15px; /* Закругленные углы изображения */
 }
 
+.button-container {
+    display: flex;
+    flex-direction: column; /* Вертикальная ориентация кнопок */
+    align-items: center; /* Центрирование кнопок */
+}
+
 .button {
-    display: block; /* Каждый элемент на новой строке */
     margin: 10px auto; /* Центрирование кнопок */
     padding: 10px 20px; /* Отступы внутри кнопки */
     background-color: darkorange; /* Цвет кнопки */
@@ -48,4 +55,14 @@ body {
     .image-container {
         width: 80%; /* Увеличиваем ширину контейнера для мобильных */
     }
+}
+
+/* Плавная анимация появления */
+body {
+    opacity: 0; /* Скрываем тело изначально */
+    transition: opacity 1s; /* Плавный переход */
+}
+
+body.loaded {
+    opacity: 1; /* Показать тело */
 }
