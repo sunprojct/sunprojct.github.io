@@ -21,16 +21,17 @@ body {
     justify-content: center;
     align-items: center;
     margin: 20px 0; /* Отступ сверху и снизу */
-    border-radius: 15px; /* Закругленные углы */
-    border: 5px solid; /* Толщина рамки */
+    border-radius: 15px; /* Закругленные углы контейнера */
+    border: 5px solid transparent; /* Прозрачная рамка для контейнера */
     border-image: linear-gradient(to right, darkorange, orange) 1; /* Градиентная рамка */
-    padding: 5px; /* Отступ между рамкой и изображением */
+    padding: 0; /* Убираем отступ между рамкой и изображением */
 }
 
 .image-container img {
     max-width: 100%; /* Занимает максимум ширины контейнера */
     height: auto; /* Высота будет пропорциональной */
-    border-radius: 10px; /* Закругленные углы изображения */
+    border-radius: 15px; /* Закругленные углы изображения */
+    display: block; /* Убираем пробел под изображением */
 }
 
 /* Адаптивность для мобильных устройств */
